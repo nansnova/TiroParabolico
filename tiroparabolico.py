@@ -75,7 +75,10 @@ def move():
         if not inside(target):
             return
 
-    ontimer(move, 50)
+
+#Altera la velocidad del tiro de la bola
+
+    ontimer(move, 10)
 
 setup(420, 420, 370, 0)
 hideturtle()
