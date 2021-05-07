@@ -1,4 +1,5 @@
-"""Cannon, hitting targets with projectiles.
+"""
+Cannon, hitting targets with projectiles.
 
 Exercises
 
@@ -8,6 +9,10 @@ Exercises
 4. Change the speed of the ball.
 
 """
+
+#Código modificado por
+#Ricardo Ramirez Condado  A01379299
+#Nancy L. García Jiménez  A01378043
 
 from random import randrange
 from turtle import *
