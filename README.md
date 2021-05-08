@@ -16,3 +16,10 @@ Lo que se necesita modificar es la velocidad en la que va la bola roja, y que el
 
     ontimer(move, 10)
 
+## Nancy
+
+2. Eliminé el "return" ubicado en el "for target" y coloqué una igualación target a 200 para que se pepita el ciclo.
+
+        for target in targets:
+            if not inside(target):
+                target = 200
