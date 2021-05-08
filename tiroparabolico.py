@@ -10,7 +10,7 @@ Exercises
 
 """
 
-#Código modificado por
+#Código modificado por:
 #Ricardo Ramirez Condado  A01379299
 #Nancy L. García Jiménez  A01378043
 
@@ -18,9 +18,14 @@ from random import randrange
 from turtle import *
 from freegames import vector
 
+#Define los parametros
+
 ball = vector(-200, -200)
 speed = vector(0, 0)
 targets = []
+bgcolor("black")
+
+#Crea valores en base a los calculos físicos que se hagan.
 
 def tap(x, y):
     "Respond to screen tap."
@@ -30,9 +35,14 @@ def tap(x, y):
         speed.x = (x + 200) / 25
         speed.y = (y + 200) / 25
 
+#Determina si los valores dados están en el rango de margen
+#Define si están en la pantalla o no.
+
 def inside(xy):
     "Return True if xy within screen."
     return -200 < xy.x < 200 and -200 < xy.y < 200
+
+#Crea o dibujo todas las bolas del juego (la azul y la roja)
 
 def draw():
     "Draw ball and targets."
@@ -47,6 +57,8 @@ def draw():
         dot(6, 'red')
 
     update()
+
+#Función encargada del movimiento
 
 def move():
     "Move ball and targets."
@@ -73,8 +85,7 @@ def move():
 
     for target in targets:
         if not inside(target):
-            return
-
+            target = 200
 
 #Altera la velocidad del tiro de la bola
 
